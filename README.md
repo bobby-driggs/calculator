@@ -26,13 +26,13 @@ Operator        => +
 ```
 ### Operators
 Here is a list of allowed **binary** operators:
-•	    ADD: "+"
-•	    SUBTRACT: "-"
-•	    MULTIPLY: "*"
-•	    DIVIDE: "/"
-•	    POWER: "^"
-•	    MOD: "%"
-•	    L_PARENTHESIS: "("
-•	    R_PARENTHESIS: ")"
+* ADD: "+"
+* SUBTRACT: "-"
+* MULTIPLY: "*"
+* DIVIDE: "/"
+* POWER: "^"
+* MOD: "%"
+* L_PARENTHESIS: "("
+* R_PARENTHESIS: ")"
 
 **NOTE:** Unary operators, including the negation operator, are not supported.
