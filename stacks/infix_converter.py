@@ -4,7 +4,10 @@ from operators import Operators
 class InfixConverter:
 
     def to_postfix(self, tokens):
-        """ Converts a list of tokens ordered by infix notation, to a list of tokens ordered by postfix notation """
+        """ 
+        Converts a list of tokens ordered by infix notation, to a list of tokens ordered by postfix notation: 
+        Algorithm barrowed from: http://interactivepython.org/runestone/static/pythonds/BasicDS/InfixPrefixandPostfixExpressions.html
+        """
         
         postfix_stack = []
 
