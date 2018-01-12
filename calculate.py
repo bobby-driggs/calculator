@@ -28,9 +28,9 @@ try:
     result = calculator.process(args.equation)
     print("{}".format(result))
 except SyntaxError as error:
-    s = args.equation
-    s = s[:error.offset + 1] + ']' + s[error.offset + 1:]
-    s = s[:error.offset] + '[' + s[error.offset:]
-
     print(error.msg)
-    print(s)
+    if error.offset is not None:
+        s = args.equation
+        s = s[:error.offset + 1] + ']' + s[error.offset + 1:]
+        s = s[:error.offset] + '[' + s[error.offset:]
+        print(s)

@@ -35,4 +35,12 @@ Here is a list of allowed **binary** operators:
 * L_PARENTHESIS: "("
 * R_PARENTHESIS: ")"
 
+All other characters will be ignored by the lexer as it parses the equation. Because of this, you'll get syntax errors if you try:
+
+```
+$ python calculate.py "1 + 2 * 3 + A"
+SyntaxError: Operator: [+], at string position: 10
+1 + 2 * 3 [+] A
+```
+
 **NOTE:** Unary operators, including the negation operator, are not supported.

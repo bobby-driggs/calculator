@@ -27,8 +27,17 @@ class PostfixEvaluator:
             elif token.type == Tokens.NUMBER:
                 number_stack.append(token.value)
 
-        return number_stack.pop()
 
+        final_stack_count = len(number_stack)
+
+        if final_stack_count > 1:
+            error = SyntaxError()
+            error.msg = "SyntaxError: Missing an operator"
+            raise error
+        elif final_stack_count == 1:
+            return number_stack.pop()
+        elif final_stack_count == 0:
+            return
     
     def __result_factory(self, left, right, operator):
         
